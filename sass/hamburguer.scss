@@ -1,0 +1,90 @@
+/*
+    HECTOR ALCAZAR 
+*/
+
+.nav__button {
+  display: block;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  @include mq("tablet") {
+    height: 20px;
+    margin: none;
+    display: inline-block;
+    float: left;
+    height: 100%;
+  }
+  @include mq("desktop") {
+  padding: 40px 0 30px 0;
+  }
+  &__btn {
+    background: transparent;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: $lineThickness solid;
+    border-bottom: $lineThickness solid;
+    color: $gray;
+    display: block;
+    height: $buttonHeight;
+    font-size: 0;
+    position: relative;
+    width: $buttonWidth;
+    transition: all $transitionSpeed $transitionEasing;
+
+    @include mq("tablet") {
+      display: none;
+      color: white;
+    }
+
+    &.nav__button--active {
+      border-color: transparent;
+      float: right;
+      left: -20px;
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &:before,
+    &:after {
+      background: currentColor;
+      content: "";
+      display: block;
+      height: $lineThickness;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform $transitionSpeed $transitionEasing;
+      width: 100%;
+    }
+
+    &:hover {
+      color: lighten($gray, 15%);
+    }
+  }
+
+  &__text {
+    font-size: $size_primary_font;
+    display: none;
+    color: white;
+    padding: 10px;
+    @include mq("desktop") {
+      padding: 0px;
+    }
+    &--active {
+      display: block;
+    }
+
+    @include mq("tablet") {
+      display:block;
+      font-weight: bold;
+      font-size: $size_title_desktop;
+    }
+  }
+}

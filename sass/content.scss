@@ -1,0 +1,164 @@
+.content {
+  &__title {
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  &__kayne {
+    background: bottom url(../images/shadow.png), left url(../images/west.png);
+    background-repeat: repeat-x, no-repeat;
+    overflow: hidden;
+  }
+
+  &__mark {
+    background: bottom url(../images/shadow.png), left url(../images/mark.png);
+    background-repeat: repeat-x, no-repeat;
+    overflow: hidden;
+  }
+
+  &__cristina {
+    background: bottom url(../images/shadow.png),
+      right url(../images/cristina.png);
+    background-repeat: repeat-x, no-repeat;
+    overflow: hidden;
+  }
+
+  &__malala {
+    background: bottom url(../images/shadow.png), left url(../images/malala.png);
+    background-repeat: repeat-x, no-repeat;
+    overflow: hidden;
+  }
+
+  &__box {
+    color: white;
+    width: 100%;
+    margin-bottom: 40px;
+    max-width: 490px;
+
+    &--padding {
+      padding-left: 40px;
+      padding-right: 20px;
+      margin: 0px;
+    }
+
+    &__title {
+      padding-top: 170px;
+      font-size: 45px;
+      @include mq("tablet") {
+        padding-top: 325px;
+      }
+
+      &--doubleline {
+        padding-top: 120px;
+        @include mq("tablet") {
+          padding-top: 270px;
+        }
+        font-size: 45px;
+      }
+    }
+
+    &__info {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 16px;
+    }
+
+    &__view {
+      border: 1px solid white;
+      padding: 10px;
+      margin-left: 40px;
+      margin-right: 20px;
+      font-size: 14px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    &__time {
+      display: block;
+      font-size: 12px;
+      margin-top: 20px;
+      float: right;
+      &__text {
+        margin: 0px;
+        &--bold {
+          font-weight: bold;
+          display: block;
+        }
+      }
+    }
+
+    &__thumb {
+      position: absolute;
+      margin-top: 218px;
+      @include mq("tablet") {
+        margin-top: 335px;
+      }
+      &--gray {
+        background: $gray;
+      }
+      &--orange {
+        background: $orange;
+      }
+      &__img {
+        width: 20px;
+        padding: 6px;
+      }
+    }
+
+    &__thumbs {
+      height: 50px;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      &__left {
+        float: left;
+        width: 50%;
+        background: $gray;
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+          border: 2px solid $white;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+        }
+      }
+      &__right {
+        width: 50%;
+        background: $orange;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        &:hover{
+          border: 2px solid $white;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+        }
+      }
+
+      &__img {
+        padding: 10px;
+        width: 30px;
+        &--rotate {
+          transform: rotate(180deg);
+        }
+      }
+
+      &__text {
+        display: inline-block;
+        margin: 0px;
+        line-height: 50px;
+
+        &--right {
+          text-align: right;
+          width: 100%;
+          float: right;
+        }
+      }
+    }
+  }
+}
