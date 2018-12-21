@@ -164,7 +164,7 @@ main {
 
   .notifications {
     margin-top: 30px;
-    background-color: $color-light-gray
+    background-color: $color-light-gray;
     width: 100%;
     overflow: hidden;
     &__left {
@@ -220,15 +220,4 @@ main {
       }
     }
   }
-}
-
-.mask--visible {
-  background: $color-translucent-black;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: -1;
 }

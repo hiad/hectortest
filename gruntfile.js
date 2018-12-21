@@ -27,19 +27,6 @@ module.exports = function(grunt) {
       }
     },
 
-    uglify: {
-      options: {
-        compress: {
-          drop_console: true
-        }
-      },
-      my_target: {
-        files: {
-          "public/build/main.min.js": ["src/main.js"]
-        }
-      }
-    },
-
     watch: {
       // watch task for general work
       sass: {
